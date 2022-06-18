@@ -5,3 +5,34 @@
     min-height: 86vh;
     justify-content: center;
 }
+
+.common_C {
+    background: #181c26;
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03)
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}

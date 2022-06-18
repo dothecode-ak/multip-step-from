@@ -3,12 +3,14 @@ const Step1 = ({ curation, setCuration }) => {
   return (
     <div className="center">
       <input
+        className="common_C"
         type="text"
         placeholder="Name"
         value={curation.email}
         onChange={(e) => setCuration({ ...curation, name: e.target.value })}
       />
       <input
+        className="common_C"
         type="text"
         placeholder="URL"
         value={curation.url}
@@ -16,6 +18,7 @@ const Step1 = ({ curation, setCuration }) => {
       />
       <input
         type="text"
+        className="common_C"
         placeholder="Description"
         value={curation.password}
         onChange={(e) =>
@@ -25,11 +28,13 @@ const Step1 = ({ curation, setCuration }) => {
       <input
         type="text"
         placeholder="Symbol"
+        className="common_C"
         value={curation.symbol}
         onChange={(e) => setCuration({ ...curation, symbol: e.target.value })}
       />
       <select
         name="category"
+        className="common_C"
         id=""
         value={curation.category}
         onChange={(e) => setCuration({ ...curation, category: e.target.value })}
@@ -43,6 +48,7 @@ const Step1 = ({ curation, setCuration }) => {
       </select>
       <input
         type="file"
+        className="common_C"
         name="file"
         value={curation.uploadThumbnailImage}
         onChange={(e) =>

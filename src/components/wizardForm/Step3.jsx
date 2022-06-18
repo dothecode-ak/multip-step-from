@@ -3,6 +3,7 @@ const Step3 = ({ curation, setCuration }) => {
   return (
     <div className="center">
       <select
+        className="common_C"
         name="blockChain"
         id=""
         value={curation.blockChain}
@@ -19,6 +20,7 @@ const Step3 = ({ curation, setCuration }) => {
       </select>
 
       <select
+        className="common_C"
         name="usdc"
         id=""
         value={curation.usdc}

@@ -70,6 +70,7 @@ const Form = () => {
             onClick={() => {
               if (page === titles.length - 1) {
                 console.log(curation);
+                localStorage.setItem("CurationData", curation);
               } else {
                 setPage((currentPage) => currentPage + 1);
               }

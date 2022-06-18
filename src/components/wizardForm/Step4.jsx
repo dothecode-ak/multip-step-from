@@ -6,6 +6,7 @@ const step4 = ({ curation, setCuration }) => {
       <select
         name="payment"
         id=""
+        className="common_C"
         value={curation.paymentMethod}
         onChange={(e) =>
           setCuration({ ...curation, paymentMethod: e.target.value })
@@ -21,6 +22,7 @@ const step4 = ({ curation, setCuration }) => {
       <input
         type="text"
         placeholder="walletAddress"
+        className="common_C"
         value={curation.walletAddress}
         onChange={(e) =>
           setCuration({ ...curation, walletAddress: e.target.value })
