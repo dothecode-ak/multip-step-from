@@ -1,28 +1,51 @@
 import React from "react";
 import "../sass/root.scss";
 import { useState } from "react";
-import SignUp from "./wizardForm/SignUp";
-import Personal from "./wizardForm/Personal";
-import OtherCmp from "./wizardForm/OtherCmp";
+import Step1 from "./wizardForm/Step1";
+import Step2 from "./wizardForm/Step2";
+import Step3 from "./wizardForm/Step3";
+import Step4 from "./wizardForm/Step4";
 const Form = () => {
   const [page, setPage] = useState(0);
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+  const [curation, setCuration] = useState({
     name: "",
-    dept: "",
-    country: "",
-    link: "",
-    file: "",
+    url: "",
+    description: "",
+    symbol: "",
+    category: "",
+    uploadThumbnailImage: "",
+    mainBannerImage: "",
+    videoUrl1: "",
+    titleVideo1: "",
+    videoUrl2: "",
+    titleVideo2: "",
+    title1: "",
+    subTitle1: "",
+    genral: "",
+    subTitle2: "",
+    subTitle3: "",
+    subTitle4: "",
+
+    blockChain: "",
+    usdc: "",
+    walletAddress: "",
+    paymentMethod: "",
   });
-  const titles = ["Sign up", "Perosonal Info", "Others Info"];
+  const titles = [
+    "Create curation 1",
+    " Create curation 2",
+    "Create curation 3",
+    "Create curation 4",
+  ];
   const PageDisplay = (page) => {
     if (page === 0) {
-      return <SignUp formData={formData} setFormData={setFormData} />;
+      return <Step1 curation={curation} setCuration={setCuration} />;
     } else if (page === 1) {
-      return <Personal formData={formData} setFormData={setFormData} />;
+      return <Step2 curation={curation} setCuration={setCuration} />;
     } else if (page === 2) {
-      return <OtherCmp formData={formData} setFormData={setFormData} />;
+      return <Step3 curation={curation} setCuration={setCuration} />;
+    } else if (page === 3) {
+      return <Step4 curation={curation} setCuration={setCuration} />;
     }
   };
   return (
@@ -46,7 +69,7 @@ const Form = () => {
             className=""
             onClick={() => {
               if (page === titles.length - 1) {
-                console.log(formData);
+                console.log(curation);
               } else {
                 setPage((currentPage) => currentPage + 1);
               }
